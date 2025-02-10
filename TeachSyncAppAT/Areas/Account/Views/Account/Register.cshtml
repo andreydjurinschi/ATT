@@ -1,0 +1,33 @@
+﻿@using TeachSyncAppAT.Areas.Account.Models
+@model RegisterModel
+
+@{
+	ViewData["Title"] = "Register";
+}
+
+<h1>@ViewData["Title"]</h1>
+<form asp-controller="Account" asp-action="Register" method="post">
+		<div asp-validation-summary="All"></div>	
+		<div>
+			<label class="form-label" asp-for="Name"></label>
+			<input class="form-control" name='Name' asp-for="Name" />
+		
+			<label class="form-label" asp-for="Surname"></label>
+			<input class="form-control" name='Surname' asp-for="Surname" />
+			
+			<label class="form-label" asp-for="Login"></label>
+			<input class="form-control" name='Login' asp-for="Login" />
+			
+			<label class="form-label" asp-for="Email"></label>
+			<input class="form-control" name='Email' asp-for="Email" />
+
+			<label class="form-label" asp-for="Password"></label>
+			<input class="form-control" name='Password' type="password" asp-for="Password" />
+
+			<label class="form-label" asp-for="PasswordConfirm"></label>
+			<input class="form-control" name='PasswordConfirm' type="password" asp-for="PasswordConfirm" />
+		<br />
+		<button type="submit" class="btn btn-primary mb-3">Отправить</button>
+		</div>
+</form>
+
